@@ -2205,3 +2205,13 @@ button:focus-visible {
         box-sizing: border-box;
     }
 }
+
+/* Fix business card photo showing through when flipped */
+.business-card-face {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-professional-photo {
+    z-index: 1;
+}
