@@ -167,3 +167,21 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
         revealObserver.observe(element);
     });
 }
+
+/* ==============================
+   PORTFOLIO QR CODE
+============================== */
+
+const portfolioQR = document.getElementById("portfolio-qr");
+
+if (portfolioQR) {
+    // Replace this with your actual Vercel deployment URL.
+    const portfolioURL = "https://YOUR-PORTFOLIO.vercel.app";
+
+    const qrAPI =
+        "https://api.qrserver.com/v1/create-qr-code/" +
+        "?size=300x300&data=" +
+        encodeURIComponent(portfolioURL);
+
+    portfolioQR.src = qrAPI;
+}

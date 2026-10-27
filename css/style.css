@@ -2176,3 +2176,21 @@ button:focus-visible {
         transition: none;
     }
 }
+
+/* ==============================
+   PORTFOLIO QR CODE
+============================== */
+
+
+.portfolio-qr-code {
+    display: block;
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    margin: 0 auto;
+}
