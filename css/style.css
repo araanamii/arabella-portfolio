@@ -2130,14 +2130,6 @@ button:focus-visible {
     box-sizing: border-box;
 }
 
-@media (max-width: 480px) {
-    .card-professional-photo {
-        right: 12px;
-        width: 115px;
-        height: 150px;
-    }
-}
-
 /* ==============================
    ACTIVE NAVIGATION LINK
 ============================== */
