@@ -1997,12 +1997,12 @@ button:focus-visible {
     top: 50%;
     transform: translateY(-50%);
 
-    width: 28%;
-    height: 68%;
+    width: 20%;
+    height: 60%;
 
     object-fit: cover;
     object-position: center 55%;
-    border-radius: 4%;
+    border-radius: 12px;
     border: 3px solid rgba(255, 255, 255, 0.95);
     outline: 1px solid rgba(145, 188, 232, 0.85);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -2110,22 +2110,19 @@ button:focus-visible {
 /* Professional photo frame — preserves original card size */
 .card-professional-photo {
     position: absolute;
-    right: 25px;
+    right: 3%;
     top: 50%;
     transform: translateY(-50%);
 
-    width: 230px;
-    height: 270px;
+    width: 20%;
+    height: 60%;
+
     object-fit: cover;
     object-position: center 55%;
-
-    border-radius: 16px;
+    border-radius: 12px;
     border: 3px solid rgba(255, 255, 255, 0.95);
     outline: 1px solid rgba(145, 188, 232, 0.85);
-    box-shadow:
-        0 10px 26px rgba(0, 0, 0, 0.2),
-        0 0 0 5px rgba(145, 188, 232, 0.14);
-
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     z-index: 2;
     box-sizing: border-box;
 }
