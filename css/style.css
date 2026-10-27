@@ -2194,3 +2194,12 @@ button:focus-visible {
 
     margin: 0 auto;
 }
+
+/* Fix mobile spacing for Certifications only */
+@media (max-width: 768px) {
+    #certifications {
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+}
