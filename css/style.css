@@ -2333,3 +2333,9 @@ button:focus-visible {
         font-size: 0.58rem;
     }
 }
+
+@media (max-width: 700px) {
+    .business-card-back {
+        padding-bottom: 32px;
+    }
+}
