@@ -2284,3 +2284,52 @@ button:focus-visible {
 .card-qr-area > small {
     font-size: clamp(5px, 0.65cqw, 8px);
 }
+
+/* BUSINESS CARD BACK — FINAL SPACING AND SIZING FIXES */
+
+/* Give the back side proper bottom breathing room */
+.business-card-back {
+    padding-bottom: clamp(18px, 4.5%, 42px);
+}
+
+/* Make desktop back-side text more readable */
+@media (min-width: 701px) {
+    .card-back-heading h3 {
+        font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+    }
+
+    .card-contact-details > a {
+        font-size: clamp(0.8rem, 1.15vw, 0.98rem);
+    }
+
+    .card-contact-details small {
+        font-size: 0.68rem;
+    }
+
+    .card-contact-details {
+        gap: 14px;
+    }
+
+    .contact-icon {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+    }
+
+    .card-qr-area {
+        width: 150px;
+    }
+
+    .portfolio-qr-code,
+    .qr-placeholder {
+        max-width: 150px;
+    }
+
+    .card-qr-area > p {
+        font-size: 0.7rem;
+    }
+
+    .card-qr-area > small {
+        font-size: 0.58rem;
+    }
+}
