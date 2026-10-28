@@ -2334,7 +2334,17 @@ button:focus-visible {
     }
 }
 
-.business-card-face.business-card-back {
-    padding: clamp(22px, 4.5vw, 42px) !important;
-    box-sizing: border-box;
+@media (max-width: 700px) {
+    .business-card-face.business-card-back {
+        padding: 5% 5% 12% !important;
+        box-sizing: border-box;
+    }
+
+    .business-card-back .card-back-content {
+        margin-bottom: 5%;
+    }
+
+    .business-card-back .card-bottom-row {
+        margin-top: auto;
+    }
 }
