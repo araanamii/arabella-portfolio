@@ -2215,3 +2215,72 @@ button:focus-visible {
 .card-professional-photo {
     z-index: 1;
 }
+
+/* BUSINESS CARD — BACK SIDE FIXES */
+
+/* Scale contents based on the card's actual width */
+.business-card-wrapper {
+    container-type: inline-size;
+}
+
+/* Hide the professional photo when the card is flipped */
+.business-card.is-flipped .card-professional-photo {
+    visibility: hidden;
+}
+
+/* Keep the QR code perfectly square */
+.portfolio-qr-code,
+.qr-placeholder {
+    width: 100%;
+    max-width: 112px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* Make the back-side layout fit smaller cards */
+.card-back-content {
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 28%);
+    gap: 3%;
+}
+
+.card-contact-details {
+    min-width: 0;
+    gap: clamp(4px, 1.5cqw, 12px);
+}
+
+.card-contact-details > a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: clamp(7px, 1.2cqw, 13px);
+    gap: clamp(4px, 1cqw, 10px);
+}
+
+.card-contact-details small {
+    font-size: clamp(6px, 0.85cqw, 9px);
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: clamp(20px, 4.2cqw, 34px);
+    height: clamp(20px, 4.2cqw, 34px);
+}
+
+.card-back-heading h3 {
+    font-size: clamp(12px, 3cqw, 34px);
+}
+
+.card-qr-area {
+    width: 100%;
+    min-width: 0;
+}
+
+.card-qr-area > p {
+    font-size: clamp(6px, 0.8cqw, 10px);
+}
+
+.card-qr-area > small {
+    font-size: clamp(5px, 0.65cqw, 8px);
+}
