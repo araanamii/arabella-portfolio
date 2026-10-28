@@ -2334,17 +2334,14 @@ button:focus-visible {
     }
 }
 
+/* MOBILE BUSINESS CARD BACK — FINAL SPACING */
 @media (max-width: 700px) {
     .business-card-face.business-card-back {
-        padding: 5% 5% 12% !important;
+        padding: 5% 5% 30px !important;
         box-sizing: border-box;
     }
 
     .business-card-back .card-back-content {
-        margin-bottom: 5%;
-    }
-
-    .business-card-back .card-bottom-row {
-        margin-top: auto;
+        margin-bottom: 0;
     }
 }
