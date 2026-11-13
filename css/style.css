@@ -2350,21 +2350,82 @@ button:focus-visible {
 }
 
 /* ==============================
-   ABOUT ME - PERSONAL DETAILS
+   ABOUT ME - UPDATED LAYOUT
 ============================== */
 
-.about-content {
+/* Main About container */
+.about-container {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
 }
 
-/* EDUCATIONAL BACKGROUND */
+/* TOP ROW: Photo + Personal Background */
+.about-top-row {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 40px;
+}
 
-.about-details {
+.about-introduction {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
+}
+
+/* MIDDLE ROW: Education */
+.about-education {
+    width: 100%;
+    background: #EDF6FF;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 28px;
+}
+
+.about-detail-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.about-detail-heading h4 {
+    color: var(--color-navy);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.about-detail-item + .about-detail-item {
+    border-top: 1px solid rgba(35, 54, 77, 0.12);
+    margin-top: 18px;
+    padding-top: 18px;
+}
+
+.about-detail-item h5 {
+    color: var(--color-navy);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.about-detail-item p {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.about-detail-item span {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+}
+
+/* BOTTOM ROW: Interests + Ambitions */
+.about-bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
 }
 
 .about-detail-card,
@@ -2372,49 +2433,8 @@ button:focus-visible {
     background: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: 20px;
-    padding: 22px;
+    padding: 26px;
 }
-
-.about-detail-heading {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 18px;
-}
-
-.about-detail-heading h4 {
-    margin: 0;
-    color: var(--color-navy);
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.about-detail-item + .about-detail-item {
-    border-top: 1px solid var(--color-border);
-    margin-top: 16px;
-    padding-top: 16px;
-}
-
-.about-detail-item h5,
-.about-goals h5 {
-    color: var(--color-navy);
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin: 0 0 5px;
-}
-
-.about-detail-item p {
-    color: var(--color-text);
-    font-size: 0.88rem;
-    margin: 0 0 5px;
-}
-
-.about-detail-item span {
-    color: var(--color-muted);
-    font-size: 0.78rem;
-}
-
-/* HOBBIES AND INTERESTS */
 
 .about-interest-list {
     display: grid;
@@ -2429,8 +2449,7 @@ button:focus-visible {
     position: relative;
     padding-left: 17px;
     color: var(--color-text);
-    font-size: 0.85rem;
-    line-height: 1.5;
+    font-size: 0.92rem;
 }
 
 .about-interest-list li::before {
@@ -2440,32 +2459,39 @@ button:focus-visible {
     color: var(--color-blue);
 }
 
-/* GOALS AND AMBITIONS */
-
-.about-goals {
-    background: var(--color-white);
-}
-
-.about-goals .about-detail-heading {
-    margin-bottom: 12px;
-}
-
 .about-goals p {
     color: var(--color-text);
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.8;
     margin: 0;
 }
 
-/* ABOUT DETAILS RESPONSIVENESS */
+/* TABLET */
+@media (max-width: 768px) {
+    .about-top-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
 
+    .about-bottom-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE */
 @media (max-width: 576px) {
+    .about-top-row {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .about-education,
     .about-detail-card,
     .about-goals {
-        padding: 18px;
+        padding: 22px;
     }
 
     .about-interest-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
