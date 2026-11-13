@@ -38,10 +38,22 @@
             <div class="nav-links" id="nav-links">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
-                <a href="#certifications">Certifications</a>
                 <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#projects">Projects</a>
                 <a href="#contact" class="nav-contact">Let's talk ↗</a>
             </div>
+
+            <button
+                type="button"
+                class="theme-toggle"
+                id="theme-toggle"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+                title="Switch to dark mode"
+            >
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+            </button>
 
         </nav>
     
@@ -104,7 +116,7 @@
                 </div>
 
                 <div class="floating-card floating-card-top">
-                    <span class="floating-icon">✳</span>
+                    <span class="floating-icon">☆</span>
                     <div>
                         <strong>Creative thinking</strong>
                         <small>Ideas into action</small>
@@ -190,71 +202,193 @@
                 <!-- MIDDLE ROW: EDUCATIONAL BACKGROUND -->
                 <div class="about-education">
                     <div class="about-detail-heading">
-                        <span class="highlight-icon">⌂</span>
-                        <h4>Educational Background</h4>
+                            <div class="about-card-icon">☆</div>
+                        <div>
+                            <span class="about-section-label">MY ACADEMIC JOURNEY</span>
+                            <h4>Educational Background</h4>
+                        </div>
                     </div>
 
-                    <div class="about-detail-item">
-                        <h5>Polytechnic University of the Philippines</h5>
-                        <p>Bachelor of Science in Information Technology</p>
-                        <span>2024 – Present</span>
-                    </div>
+                    <div class="education-timeline">
+                        <article class="education-entry">
+                            <div class="education-marker">
+                                <span class="education-dot"></span>
+                            </div>
 
-                    <div class="about-detail-item">
-                        <h5>Pateros Catholic School</h5>
-                        <p>Senior High School – STEM Strand</p>
-                        <span>Graduated 2024</span>
+                            <div class="education-card">
+                                <div class="education-card-top">
+                                    <span class="journey-type">HIGHER EDUCATION</span>
+                                    <span class="journey-date">Expected 2028</span>
+                                </div>
+
+                                <h2>Bachelor of Science in Information Technology</h2>
+                                <h3 class="journey-organization">
+                                    Polytechnic University of the Philippines
+                                </h3>
+
+                            </div>
+                        </article>
+
+                        <article class="education-entry">
+                            <div class="education-marker">
+                                <span class="education-dot"></span>
+                            </div>
+
+                            <div class="education-card">
+                                <div class="education-card-top">
+                                    <span class="journey-type">SENIOR HIGH SCHOOL</span>
+                                    <span class="journey-date">2022 - 2024</span>
+                                </div>
+
+                                <h2>Science, Technology, Engineering, and Mathematics</h2>
+                                <h3 class="journey-organization">
+                                    Pateros Catholic School
+                                </h3>
+                            </div>
+                        </article>
                     </div>
                 </div>
 
                 <!-- BOTTOM ROW: INTERESTS + AMBITIONS -->
                 <div class="about-bottom-row">
 
-                    <div class="about-detail-card about-interests">
-                        <div class="about-detail-heading">
-                            <span class="highlight-icon">✦</span>
-                            <h4>Interests & Hobbies</h4>
+                    <!-- INTERESTS AND HOBBIES -->
+                    <article class="about-detail-card about-interests">
+
+                        <div class="about-card-top">
+                            <div class="about-card-icon">♡</div>
+                            <span class="about-card-label">A LITTLE ABOUT ME</span>
                         </div>
 
-                        <ul class="about-interest-list">
-                            <li>Graphic design</li>
-                            <li>Digital art</li>
-                            <li>Animation</li>
-                            <li>Web development</li>
-                            <li>UI design</li>
-                            <li>Watching UAAP games</li>
-                        </ul>
-                    </div>
+                        <h4 class="about-card-title">Things I love doing.</h4>
 
-                    <div class="about-goals">
-                        <div class="about-detail-heading">
-                            <span class="highlight-icon">↗</span>
-                            <h4>Goals & Ambitions</h4>
-                        </div>
-
-                        <p>
-                            I'm continuously exploring software development and
-                            discovering where my skills and interests align best.
-                            My goal is to keep learning, strengthen my technical
-                            abilities, and create useful digital experiences
-                            through technology and creativity.
+                        <p class="about-card-description">
+                            A mix of creative interests, technology, and little things
+                            I enjoy outside academics.
                         </p>
-                    </div>
+
+                        <div class="interests-categories">
+
+                            <div class="interest-category">
+                                <h5>CREATIVE PURSUITS</h5>
+
+                                <div class="goal-item">
+                                    <div class="goal-icon">✳</div>
+                                    <div><h6>Graphic Design</h6></div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-icon">✎</div>
+                                    <div><h6>Digital Art</h6></div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-icon">✧</div>
+                                    <div><h6>Animation</h6></div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-icon">▧</div>
+                                    <div><h6>Video Editing</h6></div>
+                                </div>
+                                
+                                <div class="goal-item">
+                                    <div class="goal-icon">◇</div>
+                                    <div><h6>Photography</h6></div>
+                                </div>
+                            </div>
+
+                            <div class="interest-category">
+                                <h5>TECHNICAL INTERESTS</h5>
+
+                                <div class="goal-item">
+                                    <div class="goal-icon">⌘</div>
+                                    <div><h6>Web Development</h6></div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-icon">◈</div>
+                                    <div><h6>UI Design</h6></div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-icon">⌕</div>
+                                    <div><h6>Software Development</h6></div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-icon">▤</div>
+                                    <div><h6>Database Management</h6></div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-icon">⌬</div>
+                                    <div><h6>Emerging Technologies</h6></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- GOALS AND AMBITIONS -->
+                    <article class="about-goals">
+
+                        <div class="about-card-top">
+                            <div class="about-card-icon">↗</div>
+                            <span class="about-card-label">LOOKING AHEAD</span>
+                        </div>
+
+                        <h4 class="about-card-title">Building something meaningful.</h4>
+
+                        <p class="about-card-description">
+                            I'm working toward becoming a well-rounded software developer,
+                            continuously exploring different areas of development and
+                            discovering where my strengths and interests align.
+                        </p>
+
+                        <div class="goals-focus">
+                            <h5>WHAT I'M WORKING TOWARD</h5>
+
+                            <div class="goal-item">
+                                <div class="goal-icon">⌘</div>
+                                <div>
+                                    <h6>Technical Growth</h6>
+                                    <p>Strengthening my programming and development skills.</p>
+                                </div>
+                            </div>
+
+                            <div class="goal-item">
+                                <div class="goal-icon">◈</div>
+                                <div>
+                                    <h6>Creative Development</h6>
+                                    <p>Combining functionality with thoughtful UI design.</p>
+                                </div>
+                            </div>
+
+                            <div class="goal-item">
+                                <div class="goal-icon">✧</div>
+                                <div>
+                                    <h6>Continuous Learning</h6>
+                                    <p>Exploring new tools, technologies, and possibilities.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
 
                 </div>
 
-            </div>
-
         </section>
-
-        <!-- EXPERIENCE & EDUCATION SECTION -->
+ 
+        <!-- EXPERIENCE SECTION -->
         <section class="experience section-padding" id="experience">
 
             <div class="section-heading">
                 <p class="section-eyebrow">MY JOURNEY</p>
                 <h2>Learning, leading,<br><span>and growing.</span></h2>
                 <p class="section-subtitle">
-                    The experiences shaping my path in technology.
+                    The experiences shaping my path in technology, leadership, and collaboration.
                 </p>
             </div>
 
@@ -267,19 +401,41 @@
 
                     <div class="journey-details">
                         <div class="journey-meta">
-                            <span class="journey-type">EDUCATION</span>
-                            <span class="journey-date">Expected 2028</span>
+                            <span class="journey-type">ORGANIZATION</span>
+                            <span class="journey-date">2025 – Present</span>
                         </div>
 
-                        <h3>Bachelor of Science in Information Technology</h3>
+                        <h3>Project Management Associate</h3>
                         <p class="journey-organization">
-                            Polytechnic University of the Philippines
+                            GDG on Campus PUP
                         </p>
                         <p class="journey-description">
-                            Developing a foundation in information technology,
-                            systems development, databases, and software
-                            project work while exploring a future in IT
-                            project management.
+                            Contributing to the planning and execution of
+                            technology-focused events, including proposal
+                            development, project coordination, and collaboration
+                            with the Technology Department team.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="journey-card">
+                    <div class="journey-marker">
+                        <span></span>
+                    </div>
+
+                    <div class="journey-details">
+                        <div class="journey-meta">
+                            <span class="journey-type">AMBASSADORSHIP</span>
+                            <span class="journey-date">2026</span>
+                        </div>
+
+                        <h3>Ambassador</h3>
+                        <p class="journey-organization">
+                            Junior PSuccess
+                        </p>
+                        <p class="journey-description">
+                            Represented Junior PSuccess as an ambassador,
+                            participating in its initiatives and activities.
                         </p>
                     </div>
                 </article>
@@ -292,19 +448,160 @@
                     <div class="journey-details">
                         <div class="journey-meta">
                             <span class="journey-type">ORGANIZATION</span>
-                            <span class="journey-date">Nov 2025 – Present</span>
+                            <span class="journey-date">2025 – 2026</span>
                         </div>
 
-                        <h3>Project Management Team</h3>
+                        <h3>Organization Member</h3>
                         <p class="journey-organization">
-                            GDG on Campus PUP
+                            Institute of Bachelors in Information Technology Studies (IBITS)
                         </p>
                         <p class="journey-description">
-                            Contributing to an organization focused on
-                            technology and community, while developing
-                            project coordination, planning, and teamwork
-                            skills.
+                            Member of a student organization within the
+                            Information Technology community at PUP.
                         </p>
+                    </div>
+                </article>
+
+                <article class="journey-card">
+                    <div class="journey-marker">
+                        <span></span>
+                    </div>
+
+                    <div class="journey-details">
+                        <div class="journey-meta">
+                            <span class="journey-type">LEADERSHIP</span>
+                            <span class="journey-date">2023 – 2024</span>
+                        </div>
+
+                        <h3>Creatives Committee Director</h3>
+                        <p class="journey-organization">
+                            PCS SHS Courier
+                        </p>
+                        <p class="journey-description">
+                            Led the creatives team by coordinating task
+                            assignments and schedules, while overseeing the
+                            review and revision of publication materials.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="journey-card">
+                    <div class="journey-marker">
+                        <span></span>
+                    </div>
+
+                    <div class="journey-details">
+                        <div class="journey-meta">
+                            <span class="journey-type">PUBLICATION</span>
+                            <span class="journey-date">2022 – 2023</span>
+                        </div>
+
+                        <h3>Assistant to the Chief Layout Artist</h3>
+                        <p class="journey-organization">
+                            PCS SHS Courier
+                        </p>
+                        <p class="journey-description">
+                            Supported the Creatives Committee in preparing
+                            and organizing visual materials for school
+                            publication.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="journey-card">
+                    <div class="journey-marker">
+                        <span></span>
+                    </div>
+
+                    <div class="journey-details">
+                        <div class="journey-meta">
+                            <span class="journey-type">PUBLICATION</span>
+                            <span class="journey-date">2019 – 2020</span>
+                        </div>
+
+                        <h3>Photojournalist</h3>
+                        <p class="journey-organization">
+                            PCS JHS Courier
+                        </p>
+                        <p class="journey-description">
+                            Documented school activities and events through
+                            photography for the student publication.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="skills section-padding" id="skills">
+
+            <div class="section-heading">
+                <p class="section-eyebrow">WHAT I BRING</p>
+                <h2>Skills with a purpose.<br><span>Ideas into action.</span></h2>
+                <p class="section-subtitle">
+                    A growing set of technical, organizational, and interpersonal
+                    skills developed through academic work, projects, and collaboration.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+
+                <article class="skill-card">
+                    <div class="skill-card-icon">⌘</div>
+                    <p class="skill-category">01 / TECHNICAL SKILLS</p>
+                    <h3>Building with technology</h3>
+                    <p class="skill-description">
+                        Programming languages, web technologies, database tools,
+                        and networking concepts explored through coursework and projects.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>Python</span>
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>COBOL</span>
+                        <span>MySQL</span>
+                        <span>Cisco Networking</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-card-icon">↗</div>
+                    <p class="skill-category">02 / PROJECT MANAGEMENT</p>
+                    <h3>Planning and organizing</h3>
+                    <p class="skill-description">
+                        Skills developed through coordinating activities,
+                        organizing tasks, and contributing to project execution.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Project Coordination</span>
+                        <span>Task Delegation</span>
+                        <span>Time Management</span>
+                        <span>Documentation</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-card-icon">✳</div>
+                    <p class="skill-category">03 / PROFESSIONAL SKILLS</p>
+                    <h3>Working with people</h3>
+                    <p class="skill-description">
+                        Interpersonal skills that help me collaborate,
+                        communicate ideas, and adapt to different situations.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Teamwork</span>
+                        <span>Communication</span>
+                        <span>Problem-solving</span>
+                        <span>Adaptability</span>
+                        <span>Creative Thinking</span>
                     </div>
                 </article>
 
@@ -421,77 +718,358 @@
             </div>
         </section>
 
-        <!-- SKILLS SECTION -->
-        <section class="skills section-padding" id="skills">
+        <!-- PROJECTS SECTION -->
+        <section class="projects section" id="projects">
 
             <div class="section-heading">
-                <p class="section-eyebrow">WHAT I BRING</p>
-                <h2>Skills with a purpose.<br><span>Ideas into action.</span></h2>
+                <p class="section-eyebrow">MY WORK</p>
+                <h2>Projects I've brought<br><span>to life.</span></h2>
                 <p class="section-subtitle">
-                    A growing toolkit for building systems and coordinating projects.
+                    A collection of academic and individual projects
+                    where I applied my technical knowledge to build
+                    practical digital solutions.
                 </p>
             </div>
 
-            <div class="skills-grid">
+            <div class="projects-grid">
 
-                <article class="skill-card">
-                    <div class="skill-card-icon">⌘</div>
-                    <p class="skill-category">01 / TECHNICAL</p>
-                    <h3>Building with technology</h3>
-                    <p class="skill-description">
-                        Tools and technologies I've worked with through
-                        coursework and personal projects.
-                    </p>
+                <!-- Project 1: SENTRY -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/sentry/sentry_prof-dash.png"
+                            alt="SENTRY online learning activity monitoring platform"
+                            loading="lazy">
+                        <span class="project-type">INDIVIDUAL ACADEMIC PROJECT</span>
+                    </div>
 
-                    <div class="skill-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>Git</span>
-                        <span>VS Code</span>
+                    <div class="project-info">
+                        <h3>SENTRY</h3>
+                        <p class="project-subtitle">
+                            An Online Learning Activity Monitoring Platform
+                        </p>
+                        <p class="project-description">
+                            A web-based platform that integrates a Chrome browser
+                            extension, PHP backend, and MySQL database to collect
+                            and present students' observable online learning activities.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Chrome Extension</span>
+                        </div>
+
+                        <p class="project-role">
+                            <strong>Role:</strong> Sole Developer
+                        </p>
+                        <span class="project-status">Completed</span>
+
+                        <button class="project-gallery-btn" type="button"
+                            data-gallery="sentry">
+                            View Gallery ↗
+                        </button>
+                        
                     </div>
                 </article>
 
-                <article class="skill-card">
-                    <div class="skill-card-icon">↗</div>
-                    <p class="skill-category">02 / PROJECTS</p>
-                    <h3>Planning and organizing</h3>
-                    <p class="skill-description">
-                        Skills I use to structure tasks, manage priorities,
-                        and help projects move forward.
-                    </p>
+                <!-- Project 2: Student Records Management System -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/student_records/studrec_dash-1.png"
+                            alt="Student Records Management System interface"
+                            loading="lazy">
+                        <span class="project-type">INDIVIDUAL ACADEMIC PROJECT</span>
+                    </div>
 
-                    <div class="skill-tags">
-                        <span>Task coordination</span>
-                        <span>Planning</span>
-                        <span>Organization</span>
-                        <span>Documentation</span>
+                    <div class="project-info">
+                        <h3>Student Records Management System</h3>
+                        <p class="project-subtitle">
+                            A CRUD Web Application
+                        </p>
+                        <p class="project-description">
+                            A web application for managing student information
+                            through basic database operations, allowing users
+                            to add, view, update, and delete student records.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Apache</span>
+                            <span>XAMPP</span>
+                        </div>
+
+                        <p class="project-role">
+                            <strong>Role:</strong> Web Application Developer
+                        </p>
+                        <span class="project-status">Completed</span>
+
+                        <button class="project-gallery-btn" type="button"
+                            data-gallery="student-records">
+                            View Gallery ↗
+                        </button>
+
                     </div>
                 </article>
 
-                <article class="skill-card">
-                    <div class="skill-card-icon">✳</div>
-                    <p class="skill-category">03 / COLLABORATION</p>
-                    <h3>Working with people</h3>
-                    <p class="skill-description">
-                        Approaches that support teamwork and clear,
-                        thoughtful communication.
-                    </p>
+                <!-- Project 3: AssetTrack -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/assettrack/assettrack_deskt-scan.png"
+                            alt="AssetTrack QR-based asset management platform"
+                            loading="lazy">
+                        <span class="project-type">INDIVIDUAL ACADEMIC PROJECT</span>
+                    </div>
 
-                    <div class="skill-tags">
-                        <span>Teamwork</span>
-                        <span>Communication</span>
-                        <span>Problem-solving</span>
-                        <span>Adaptability</span>
+                    <div class="project-info">
+                        <h3>AssetTrack</h3>
+                        <p class="project-subtitle">
+                            QR-Based Asset Management System
+                        </p>
+                        <p class="project-description">
+                            A mobile-friendly asset management platform that
+                            uses QR codes to identify registered assets and
+                            provides a dashboard for viewing asset information,
+                            ownership, and status.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Google Sheets</span>
+                            <span>Google Apps Script</span>
+                        </div>
+
+                        <p class="project-role">
+                            <strong>Role:</strong> Sole Developer
+                        </p>
+                        <span class="project-status">Completed</span>
+
+                        <button class="project-gallery-btn" type="button"
+                            data-gallery="assettrack">
+                            View Gallery ↗
+                        </button>
+
                     </div>
                 </article>
 
             </div>
 
         </section>
-            
-        
+
+
+        <!-- FEATURED COLLABORATIVE PROJECTS -->
+        <section class="projects featured-projects section" id="featured-projects">
+
+            <div class="section-heading">
+                <p class="section-eyebrow">COLLABORATIVE ACADEMIC WORK</p>
+                <h2>Featured<br><span>Projects.</span></h2>
+                <p class="section-subtitle">
+                    Collaborative academic projects where I contributed
+                    to project documentation, research, and team deliverables.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Barangay Comembo Blotter Management System -->
+                <article class="project-card">
+                    <div class="project-image featured-project-image">
+                        <img src="assets/images/blottersystem/blottersystem_docu.png"
+                            alt="Development of a Database System for Blotter Management in Barangay Comembo, Taguig City"
+                            loading="lazy">
+                        <span class="project-type">COLLABORATIVE ACADEMIC PROJECT</span>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Barangay Comembo Blotter Management System</h3>
+                        <p class="project-subtitle">Barangay Blotter Management System</p>
+                        <p class="project-description">
+                            A system designed to support barangay blotter management,
+                            featuring separate interfaces for barangay personnel
+                            and civilian users, along with dashboards and record
+                            management views.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>System Documentation</span>
+                            <span>Research</span>
+                            <span>Team Collaboration</span>
+                            
+                        </div>
+
+                        <p class="project-role">
+                            <strong>Role:</strong> Documentation & Research Paper
+                        </p>
+
+                        <button class="project-gallery-btn" type="button"
+                            data-gallery="blottersystem">
+                            View Gallery ↗
+                        </button>
+
+                    </div>
+                </article>
+
+                <!-- PyPulse -->
+                <article class="project-card">
+                    <div class="project-image featured-project-image">
+                        <img src="assets/images/pypulse/pypulse_docu.png"
+                            alt="A Python-Driven Analytics System for Health and Fitness Tracking"
+                            loading="lazy">
+                        <span class="project-type">COLLABORATIVE ACADEMIC PROJECT</span>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>PyPulse</h3>
+                        <p class="project-subtitle">
+                            A Python-Driven Analytics System for Health and Fitness Tracking
+                        </p>
+                        <p class="project-description">
+                            A Python-based analytics project focused on health
+                            and fitness tracking, developed as a collaborative
+                            academic project.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Documentation</span>
+                            <span>Team Collaboration</span>
+                        </div>
+
+                        <p class="project-role">
+                            <strong>Role:</strong> Documentation & Project Paper
+                        </p>
+
+                        <button class="project-gallery-btn" type="button"
+                            data-gallery="pypulse">
+                            View Gallery ↗
+                        </button>
+
+                    </div>
+                </article>
+
+                <!-- TAMAC -->
+                <article class="project-card">
+                    <div class="project-image featured-project-image">
+                        <img src="assets/images/tamac/tamac_docu.png"
+                            alt="Design and Implementation of a Highly Available Enterprise Network Infrastructure for TAMAC Inc."
+                            loading="lazy">
+                        <span class="project-type">COLLABORATIVE ACADEMIC PROJECT</span>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>TAMAC</h3>
+                        <p class="project-subtitle">
+                            Trusted Authentication for Multi-tenant Access & Commerce Incorporated
+                        </p>
+                        <p class="project-description">
+                            A collaborative network administration academic project
+                            centered on trusted authentication and multi-tenant access.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Network Administration</span>
+                            <span>Documentation</span>
+                            <span>Team Collaboration</span>
+                        </div>
+
+                        <p class="project-role">
+                            <strong>Role:</strong> Documentation & Project Paper
+                        </p>
+
+                        <button class="project-gallery-btn" type="button"
+                            data-gallery="tamac">
+                            View Gallery ↗
+                        </button>
+
+                    </div>
+                </article>
+
+                <!-- VolunTrack -->
+                <article class="project-card">
+                    <div class="project-image featured-project-image">
+                        <img src="assets/images/voluntrack/voluntrack_docu.png"
+                            alt="VolunTrack: A Java-Based Event Assignment and Volunteer Management System with Database Integration"
+                            loading="lazy">
+                        <span class="project-type">COLLABORATIVE ACADEMIC PROJECT</span>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>VolunTrack</h3>
+                        <p class="project-subtitle">Event Volunteer Management System</p>
+                        <p class="project-description">
+                            A collaborative academic project focused on managing
+                            volunteers and organizing event-related volunteer
+                            activities.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>System Documentation</span>
+                            <span>Project Planning</span>
+                            <span>Team Collaboration</span>
+                        </div>
+
+                        <p class="project-role">
+                            <strong>Role:</strong> Documentation & Project Paper
+                        </p>
+
+                        <button class="project-gallery-btn" type="button"
+                            data-gallery="voluntrack">
+                            View Gallery ↗
+                        </button>
+
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- PROJECT GALLERY LIGHTBOX -->
+        <div class="gallery-lightbox" id="project-gallery" aria-hidden="true">
+            <div class="gallery-content" role="dialog"
+                aria-modal="true" aria-labelledby="gallery-title">
+
+                <div class="gallery-header">
+                    <div>
+                        <p class="section-eyebrow">PROJECT GALLERY</p>
+                        <h2 id="gallery-title">Project Screenshots</h2>
+                    </div>
+
+                    <button class="gallery-close" id="gallery-close"
+                        type="button" aria-label="Close gallery">
+                        &times;
+                    </button>
+                </div>
+
+                <div class="gallery-viewer">
+                    <button class="gallery-nav gallery-prev" id="gallery-prev"
+                        type="button" aria-label="Previous image">
+                        &#10094;
+                    </button>
+
+                    <img id="gallery-image" src=""
+                        alt="Project screenshot">
+
+                    <button class="gallery-nav gallery-next" id="gallery-next"
+                        type="button" aria-label="Next image">
+                        &#10095;
+                    </button>
+                </div>
+
+                <div class="gallery-footer">
+                    <p id="gallery-caption"></p>
+                    <span id="gallery-counter"></span>
+                </div>
+
+            </div>
+        </div>
+
         <!-- CONTACT / DIGITAL BUSINESS CARD -->
         <section id="contact" class="contact-section section-padding">
             <div class="section-heading">
@@ -614,6 +1192,32 @@
                     <span>↻</span> Click or tap the card to flip it
                 </p>
             </div>
+
+            <form class="contact-form" id="contact-form">
+
+                <div class="form-group">
+                    <label for="message">Send me a Message!</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Hi Ara! I'd love to connect with you..."
+                        rows="7"
+                        required
+                    ></textarea>
+
+                    <span class="form-hint">
+                        Have a question or a project in mind? Send me a message!
+                    </span>
+                </div>
+
+                <button type="submit" class="contact-submit">
+                    Send Message
+                    <span aria-hidden="true">↗</span>
+                </button>
+
+            </form>
+
         </section>
 
     </main>
@@ -648,6 +1252,29 @@
         </div>
 
     </footer>
+
+    <!-- SUCCESS POPUP -->
+    <div class="success-popup" id="success-popup" aria-hidden="true">
+        <div class="success-popup-content" role="dialog"
+            aria-modal="true" aria-labelledby="success-title">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2 id="success-title">Message Submitted!</h2>
+
+            <p>
+                Thank you for reaching out.
+                I appreciate your message and will be glad to connect with you!
+            </p>
+
+            <button type="button" id="success-close">
+                Got it!
+            </button>
+
+        </div>
+    </div>
 
 </body>
 </html>
