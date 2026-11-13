@@ -2443,7 +2443,7 @@ button:focus-visible {
 /* GOALS AND AMBITIONS */
 
 .about-goals {
-    background: var(--color-cream);
+    background: var(--color-white);
 }
 
 .about-goals .about-detail-heading {
