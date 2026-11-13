@@ -130,14 +130,14 @@ if ("IntersectionObserver" in window && sections.length) {
     });
 }
 
-
 /* ==============================
    SCROLL-REVEAL ANIMATIONS
 ============================== */
 
 const revealElements = document.querySelectorAll(
     ".section-heading, .about-container, .journey-card, " +
-    ".certification-card, .skill-card, .business-card-wrapper"
+    ".certification-card, .skill-card, .business-card-wrapper, " +
+    ".project-card"
 );
 
 const prefersReducedMotion = window.matchMedia(
@@ -145,6 +145,7 @@ const prefersReducedMotion = window.matchMedia(
 ).matches;
 
 if ("IntersectionObserver" in window && !prefersReducedMotion) {
+
     revealElements.forEach(function (element) {
         element.classList.add("reveal");
     });
@@ -159,12 +160,18 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
             });
         },
         {
-            threshold: 0.12
+            threshold: 0.05,
+            rootMargin: "0px 0px -30px 0px"
         }
     );
 
     revealElements.forEach(function (element) {
         revealObserver.observe(element);
+    });
+
+} else {
+    revealElements.forEach(function (element) {
+        element.classList.add("revealed");
     });
 }
 
