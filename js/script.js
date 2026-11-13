@@ -151,11 +151,12 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
     });
 
     const revealObserver = new IntersectionObserver(
-        function (entries, observer) {
+        function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("revealed");
-                    observer.unobserve(entry.target);
+                } else {
+                    entry.target.classList.remove("revealed");
                 }
             });
         },
