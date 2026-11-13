@@ -3539,3 +3539,27 @@ html[data-theme="dark"] .success-popup-content button:hover {
         flex-basis: 100%;
     }
 }
+
+/* ========================================
+   MOBILE SECTION SIDE SPACING
+======================================== */
+
+@media (max-width: 700px) {
+    .certifications,
+    .projects {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .certifications .container,
+    .projects .container,
+    .featured-projects .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .certification-card,
+    .project-card {
+        border-radius: 18px;
+    }
+}
