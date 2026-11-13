@@ -1193,7 +1193,12 @@
                 </p>
             </div>
 
-            <form class="contact-form" id="contact-form">
+            <form
+                class="contact-form"
+                id="contact-form"
+                action="https://formspree.io/f/mkjrojbo"
+                method="POST"
+            >
 
                 <div class="form-group">
                     <label for="message">Send me a Message!</label>
@@ -1215,6 +1220,13 @@
                     Send Message
                     <span aria-hidden="true">↗</span>
                 </button>
+
+                <p
+                    class="form-status"
+                    id="form-status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
 
             </form>
 

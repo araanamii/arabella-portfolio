@@ -617,24 +617,66 @@ document.addEventListener("keydown", event => {
 });
 
 /* ==============================
-   CONTACT FORM SUCCESS POPUP
+   CONTACT FORM HANDLING - FORMSPREE
 ============================== */
 
 const contactForm = document.getElementById("contact-form");
 const successPopup = document.getElementById("success-popup");
 const successClose = document.getElementById("success-close");
+const formStatus = document.getElementById("form-status");
 
 if (contactForm && successPopup && successClose) {
 
-    contactForm.addEventListener("submit", function(event) {
+    const submitButton = contactForm.querySelector(
+        'button[type="submit"]'
+    );
+
+    const originalButtonContent = submitButton.innerHTML;
+
+    contactForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        successPopup.classList.add("active");
-        successPopup.setAttribute("aria-hidden", "false");
+        if (submitButton.disabled) return;
 
-        contactForm.reset();
+        // Clear previous messages.
+        if (formStatus) {
+            formStatus.textContent = "";
+        }
 
-        successClose.focus();
+        // Show loading state.
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error("Message submission failed.");
+            }
+
+            // Only show success after Formspree confirms submission.
+            contactForm.reset();
+
+            successPopup.classList.add("active");
+            successPopup.setAttribute("aria-hidden", "false");
+
+            successClose.focus();
+
+        } catch (error) {
+            if (formStatus) {
+                formStatus.textContent =
+                    "Sorry, your message couldn't be sent. Please try again.";
+            }
+        } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonContent;
+        }
     });
 
     function closeSuccessPopup() {
@@ -644,13 +686,13 @@ if (contactForm && successPopup && successClose) {
 
     successClose.addEventListener("click", closeSuccessPopup);
 
-    successPopup.addEventListener("click", function(event) {
+    successPopup.addEventListener("click", function (event) {
         if (event.target === successPopup) {
             closeSuccessPopup();
         }
     });
 
-    document.addEventListener("keydown", function(event) {
+    document.addEventListener("keydown", function (event) {
         if (
             event.key === "Escape" &&
             successPopup.classList.contains("active")
