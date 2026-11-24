@@ -15,6 +15,46 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
+
+    <div class="boot-screen" id="boot-screen" data-cursor-label="SYSTEM" role="dialog" aria-modal="true" aria-labelledby="boot-title" tabindex="-1">
+        <div class="boot-window">
+            <div class="boot-window-top">
+                <a href="#home" class="boot-mark" aria-label="Arabella's portfolio">AR<span>.</span></a>
+                <span class="boot-system-label">PORTFOLIO OS <b>1.0</b></span>
+                <span class="boot-window-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+            <div class="boot-content">
+                <p class="boot-eyebrow">PORTFOLIO OS v1.0 / BOOT SEQUENCE</p>
+                <h2 id="boot-title">Initializing<br><span>portfolio.exe</span></h2>
+                <div class="boot-terminal" aria-live="polite" aria-relevant="additions text">
+                    <p class="boot-terminal-prompt">C:\PORTFOLIO&gt; initialize --production</p>
+                    <div class="boot-log" id="boot-log"></div>
+                </div>
+                <div class="boot-progress-row"><span id="boot-state">STARTING UP</span><span id="boot-percent">00%</span></div>
+                <div class="boot-progress-track" id="boot-progress" role="progressbar" aria-label="Portfolio loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+                <p class="boot-shortcut" id="boot-shortcut">PLEASE WAIT WHILE THE INTERFACE COMES TO LIFE</p>
+            </div>
+            <div class="boot-window-bottom"><span>ARABELLA LISS / DIGITAL PORTFOLIO</span><span>DESIGNED WITH CARE <b>✳</b></span></div>
+        </div>
+        <div class="boot-binary-field" id="boot-binary-field" aria-hidden="true"></div>
+        <div class="boot-gate" aria-live="polite">
+            <p class="gate-eyebrow">ARABELLA'S PORTFOLIO · P. 01</p>
+            <h2>Portfolio<br><span>ready.</span></h2>
+            <p class="gate-copy">A folio of ideas, interfaces, and the systems behind them.</p>
+            <button class="boot-enter" id="boot-enter" data-cursor-label="START" type="button" disabled>
+                <span>Press Start</span><b aria-hidden="true">↗</b>
+            </button>
+            <p class="gate-footnote">[ ENTER ] &nbsp; TO LOAD PORTFOLIO</p>
+        </div>
+    </div>
+
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+        <span class="cursor-shadow"></span>
+        <span class="cursor-core"></span>
+        <span class="cursor-label" id="cursor-label">YOU</span>
+    </div>
+
+    <noscript><style>.boot-screen { display:none !important; }</style></noscript>
     
     <header class="site-header">
 
@@ -55,6 +95,10 @@
                 <span class="theme-toggle-icon" aria-hidden="true">☾</span>
             </button>
 
+            <button type="button" class="command-trigger" id="command-trigger" aria-label="Open quick navigation" title="Quick navigation · Ctrl K">
+                <span aria-hidden="true">⌘</span><kbd>K</kbd>
+            </button>
+
         </nav>
     
     </header>
@@ -66,17 +110,40 @@
         <section class="hero" id="home">
 
             <div class="hero-content">
-                <p class="hero-eyebrow">
-                    <span class="status-dot"></span>
-                    INFORMATION TECHNOLOGY STUDENT
-                </p>
+                <div class="system-readout" aria-label="Portfolio system status">
+                    <span><i aria-hidden="true"></i> PORTFOLIO SYSTEM ONLINE</span>
+                    <span class="readout-divider">/</span>
+                    <span>PROFILE <b>AR.01</b></span>
+                </div>
 
-                <h1>
-                    Hello, I'm <span>Ara.</span>
-                    <br>
-                    I turn ideas into
-                    <span class="highlight">digital experiences.</span>
-                </h1>
+                <div class="hero-title-selection" aria-label="Selected title text layer">
+                    <div class="selection-toolbar" aria-hidden="true">
+                        <span class="selection-layer-icon">T</span>
+                        <span>HERO / TITLE</span>
+                        <span class="selection-layer-kind">TEXT</span>
+                    </div>
+                    <div class="selection-bounds">
+                        <h1>
+                            Hello, I'm <span>Ara.</span>
+                            <br>
+                            I turn ideas into
+                            <span class="highlight">digital experiences.</span>
+                        </h1>
+                        <i class="selection-handle handle-nw"></i>
+                        <i class="selection-handle handle-n"></i>
+                        <i class="selection-handle handle-ne"></i>
+                        <i class="selection-handle handle-e"></i>
+                        <i class="selection-handle handle-se"></i>
+                        <i class="selection-handle handle-s"></i>
+                        <i class="selection-handle handle-sw"></i>
+                        <i class="selection-handle handle-w"></i>
+                    </div>
+                    <div class="selection-inspector" aria-hidden="true">
+                        <span>TYPE <b>DISPLAY</b></span>
+                        <span>ALIGN <b>LEFT</b></span>
+                        <span>FIT <b>CONTENT</b></span>
+                    </div>
+                </div>
 
                 <p class="hero-description">
                     My name is Arabella Liss Gillegao, I'm an Information Technology student interested in
@@ -99,6 +166,7 @@
                     <span>✳</span>
                     Aspiring Software Developer
                 </div>
+
             </div>
 
             <div class="hero-visual">
@@ -140,19 +208,32 @@
         </section>
         
 
-        <!-- ABOUT ME -->
-        <section id="about" class="about-section section-padding">
-            <div class="section-heading">
+        <!-- ABOUT ME: PINNED HORIZONTAL STORY -->
+        <section id="about" class="about-section about-scroll-section">
+            <div class="about-scroll-spacer">
+                <div class="about-stage" aria-label="Scroll through my story">
+                    <div class="about-color-panel">
+                        <div class="about-story-topline">
+                            <span>ABOUT / A LITTLE MORE THAN THE RÉSUMÉ</span>
+                            <div class="about-story-progress" role="group" aria-label="About story chapters">
+                                <button type="button" class="about-step is-active" data-about-step="0" aria-label="Show introduction" aria-current="step"></button>
+                                <button type="button" class="about-step" data-about-step="1" aria-label="Show education"></button>
+                                <button type="button" class="about-step" data-about-step="2" aria-label="Show interests and goals"></button>
+                            </div>
+                            <span class="about-story-count"><b id="about-step-count">01</b> / 03</span>
+                        </div>
+                                    <div class="section-heading about-story-heading">
                 <p class="section-eyebrow">GET TO KNOW ME</p>
                 <h2>More than just <span>the code.</span></h2>
                 <p class="section-subtitle">
                     A little about the person behind the projects.
                 </p>
             </div>
-            
-            <div class="about-container">
-
-                <!-- TOP ROW: PHOTO + PERSONAL BACKGROUND -->
+                        <div class="about-horizontal-viewport" tabindex="0" aria-label="Scroll horizontally through the About section">
+                            <div class="about-track">
+                                <article class="about-panel" data-about-panel="0" aria-label="Introduction">
+                                    <div class="about-container about-panel-content">
+                                        <!-- TOP ROW: PHOTO + PERSONAL BACKGROUND -->
                 <div class="about-top-row">
 
                     <div class="about-photo">
@@ -198,8 +279,11 @@
                     </div>
 
                 </div>
-
-                <!-- MIDDLE ROW: EDUCATIONAL BACKGROUND -->
+                                    </div>
+                                </article>
+                                <article class="about-panel" data-about-panel="1" aria-label="Education">
+                                    <div class="about-container about-panel-content">
+                                        <!-- MIDDLE ROW: EDUCATIONAL BACKGROUND -->
                 <div class="about-education">
                     <div class="about-detail-heading">
                             <div class="about-card-icon">☆</div>
@@ -248,139 +332,55 @@
                         </article>
                     </div>
                 </div>
-
-                <!-- BOTTOM ROW: INTERESTS + AMBITIONS -->
-                <div class="about-bottom-row">
-
-                    <!-- INTERESTS AND HOBBIES -->
-                    <article class="about-detail-card about-interests">
-
-                        <div class="about-card-top">
-                            <div class="about-card-icon">♡</div>
-                            <span class="about-card-label">A LITTLE ABOUT ME</span>
+                                    </div>
+                                </article>
+                                <article class="about-panel" data-about-panel="2" aria-label="Interests and goals">
+                                    <div class="about-container about-panel-content">
+                                        <!-- BOTTOM ROW: INTERESTS + AMBITIONS -->
+                <div class="about-bottom-row about-vision-board">
+                    <section class="interest-field" aria-labelledby="interest-field-title">
+                        <div class="vision-heading">
+                            <span class="vision-kicker"><i>✳</i> LITTLE THINGS, BIG INSPIRATION</span>
+                            <h3 id="interest-field-title">My kind of <em>playground.</em></h3>
+                            <p>Creative corners and curious rabbit holes.</p>
                         </div>
-
-                        <h4 class="about-card-title">Things I love doing.</h4>
-
-                        <p class="about-card-description">
-                            A mix of creative interests, technology, and little things
-                            I enjoy outside academics.
-                        </p>
-
-                        <div class="interests-categories">
-
-                            <div class="interest-category">
-                                <h5>CREATIVE PURSUITS</h5>
-
-                                <div class="goal-item">
-                                    <div class="goal-icon">✳</div>
-                                    <div><h6>Graphic Design</h6></div>
-                                </div>
-
-                                <div class="goal-item">
-                                    <div class="goal-icon">✎</div>
-                                    <div><h6>Digital Art</h6></div>
-                                </div>
-
-                                <div class="goal-item">
-                                    <div class="goal-icon">✧</div>
-                                    <div><h6>Animation</h6></div>
-                                </div>
-
-                                <div class="goal-item">
-                                    <div class="goal-icon">▧</div>
-                                    <div><h6>Video Editing</h6></div>
-                                </div>
-                                
-                                <div class="goal-item">
-                                    <div class="goal-icon">◇</div>
-                                    <div><h6>Photography</h6></div>
-                                </div>
-                            </div>
-
-                            <div class="interest-category">
-                                <h5>TECHNICAL INTERESTS</h5>
-
-                                <div class="goal-item">
-                                    <div class="goal-icon">⌘</div>
-                                    <div><h6>Web Development</h6></div>
-                                </div>
-
-                                <div class="goal-item">
-                                    <div class="goal-icon">◈</div>
-                                    <div><h6>UI Design</h6></div>
-                                </div>
-
-                                <div class="goal-item">
-                                    <div class="goal-icon">⌕</div>
-                                    <div><h6>Software Development</h6></div>
-                                </div>
-
-                                <div class="goal-item">
-                                    <div class="goal-icon">▤</div>
-                                    <div><h6>Database Management</h6></div>
-                                </div>
-
-                                <div class="goal-item">
-                                    <div class="goal-icon">⌬</div>
-                                    <div><h6>Emerging Technologies</h6></div>
-                                </div>
-                            </div>
-
+                        <div class="interest-constellation" aria-label="Interests">
+                            <div class="interest-tile tile-design"><span>✿</span><b>Graphic design</b></div>
+                            <div class="interest-tile tile-art"><span>✎</span><b>Digital art</b></div>
+                            <div class="interest-tile tile-motion"><span>✦</span><b>Animation</b></div>
+                            <div class="interest-tile tile-video"><span>▣</span><b>Video editing</b></div>
+                            <div class="interest-tile tile-photo"><span>◉</span><b>Photography</b></div>
+                            <div class="interest-tile tile-web"><span>&lt;/&gt;</span><b>Web development</b></div>
+                            <div class="interest-tile tile-ui"><span>◫</span><b>UI design</b></div>
+                            <div class="interest-tile tile-software"><span>⌘</span><b>Software</b></div>
+                            <div class="interest-tile tile-data"><span>▤</span><b>Databases</b></div>
+                            <div class="interest-tile tile-tech"><span>⌬</span><b>New tech</b></div>
                         </div>
-
-                    </article>
-
-                    <!-- GOALS AND AMBITIONS -->
-                    <article class="about-goals">
-
-                        <div class="about-card-top">
-                            <div class="about-card-icon">↗</div>
-                            <span class="about-card-label">LOOKING AHEAD</span>
+                        <span class="field-sparkle field-sparkle-one" aria-hidden="true">✧</span>
+                        <span class="field-sparkle field-sparkle-two" aria-hidden="true">·</span>
+                    </section>
+                    <section class="future-field" aria-labelledby="future-field-title">
+                        <div class="future-orbit" aria-hidden="true"><span>✦</span><i></i><i></i></div>
+                        <span class="vision-kicker">NEXT / IN PROGRESS</span>
+                        <h3 id="future-field-title">A future made<br>of <em>good ideas.</em></h3>
+                        <div class="future-path">
+                            <div class="future-stop"><span>01</span><p>Grow as a developer</p><b>↗</b></div>
+                            <div class="future-stop"><span>02</span><p>Make useful, thoughtful interfaces</p><b>↗</b></div>
+                            <div class="future-stop"><span>03</span><p>Stay curious and keep learning</p><b>↗</b></div>
                         </div>
-
-                        <h4 class="about-card-title">Building something meaningful.</h4>
-
-                        <p class="about-card-description">
-                            I'm working toward becoming a well-rounded software developer,
-                            continuously exploring different areas of development and
-                            discovering where my strengths and interests align.
-                        </p>
-
-                        <div class="goals-focus">
-                            <h5>WHAT I'M WORKING TOWARD</h5>
-
-                            <div class="goal-item">
-                                <div class="goal-icon">⌘</div>
-                                <div>
-                                    <h6>Technical Growth</h6>
-                                    <p>Strengthening my programming and development skills.</p>
-                                </div>
-                            </div>
-
-                            <div class="goal-item">
-                                <div class="goal-icon">◈</div>
-                                <div>
-                                    <h6>Creative Development</h6>
-                                    <p>Combining functionality with thoughtful UI design.</p>
-                                </div>
-                            </div>
-
-                            <div class="goal-item">
-                                <div class="goal-icon">✧</div>
-                                <div>
-                                    <h6>Continuous Learning</h6>
-                                    <p>Exploring new tools, technologies, and possibilities.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </article>
-
+                        <span class="future-signoff">ONE STEP AT A TIME <i>♡</i></span>
+                    </section>
                 </div>
-
+                                </div>
+                                </article>
+                            </div>
+                        </div>
+                        <p class="about-scroll-hint"><span aria-hidden="true">↕</span> Keep scrolling to move through my story</p>
+                    </div>
+                </div>
+            </div>
         </section>
- 
+
         <!-- EXPERIENCE SECTION -->
         <section class="experience section-padding" id="experience">
 
@@ -392,7 +392,22 @@
                 </p>
             </div>
 
-            <div class="journey-list">
+            <div class="journey-list" aria-label="Experience timeline">
+
+                <article class="journey-card">
+                    <div class="journey-marker"><span></span></div>
+                    <div class="journey-details">
+                        <div class="journey-meta">
+                            <span class="journey-type">ANIMAL WELFARE · EVENTS</span>
+                            <span class="journey-date">Nov 2026 – Present</span>
+                        </div>
+                        <h3>Events Committee Member</h3>
+                        <p class="journey-organization">Youth for Animals – PUP Main</p>
+                        <p class="journey-description">
+                            Supporting the planning and delivery of events that raise awareness of animal welfare, engage the university community, and promote humane, responsible treatment of animals.
+                        </p>
+                    </div>
+                </article>
 
                 <article class="journey-card">
                     <div class="journey-marker">
@@ -611,6 +626,9 @@
 
         <!-- Certifications Section -->
         <section class="certifications section" id="certifications">
+          <div class="certifications-scroll-spacer">
+           <div class="certifications-stage">
+            <div class="certifications-color-panel">
             <div class="section-heading">
                 <p class="section-eyebrow">MY CREDENTIALS</p>
                 <h2>Certifications &amp; Learning</h2>
@@ -620,26 +638,30 @@
                 </p>
             </div>
 
-            <div class="certifications-grid">
+            <div class="certification-deck-controls">
+                <span class="index-label">CERTIFICATE DECK / SWIPE TO SHUFFLE / <output id="certification-index-count" aria-live="polite">01 / 03</output></span>
+                <div class="deck-arrows" aria-label="Shuffle certificates">
+                    <button type="button" class="deck-arrow" data-deck="certifications" data-direction="-1" aria-label="Previous certificate">←</button>
+                    <button type="button" class="deck-arrow" data-deck="certifications" data-direction="1" aria-label="Next certificate">→</button>
+                </div>
+            </div>
+
+            <div class="certifications-grid" id="certification-deck" tabindex="0" aria-label="Certificate deck. Shuffle with the arrow keys, browse buttons, or a horizontal swipe. Click the top card for details.">
+                <div class="certificate-orbit">
 
                 <!-- Certification 1 -->
-                <article class="certification-card">
-                    <a
-                        href="assets/pdfs/certification-1.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="certification-preview"
-                        aria-label="View Introduction to Cloud certificate PDF"
-                    >
+                <article class="certification-card" data-certification-pdf="assets/pdfs/certification-1.pdf">
+                    <div class="certificate-face">
+                    <div class="certification-preview" aria-hidden="true">
                         <img
                             src="assets/images/certificates/certification-1.png"
                             alt="Introduction to Cloud certificate preview"
                             loading="lazy"
                         >
                         <span class="preview-overlay">
-                            <span>View certificate <span aria-hidden="true">↗</span></span>
+                            <span>Details &amp; PDF <span aria-hidden="true">↗</span></span>
                         </span>
-                    </a>
+                    </div>
 
                     <div class="certification-info">
                         <span class="certification-category">CLOUD COMPUTING</span>
@@ -651,26 +673,23 @@
                         <p class="certification-date">Completed October 20, 2026</p>
 
                     </div>
+                
+                    </div>
                 </article>
 
                 <!-- Certification 2 -->
-                <article class="certification-card">
-                    <a
-                        href="assets/pdfs/certification-2.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="certification-preview"
-                        aria-label="View Workato Foundations Level 1 certificate PDF"
-                    >
+                <article class="certification-card" data-certification-pdf="assets/pdfs/certification-2.pdf">
+                    <div class="certificate-face">
+                    <div class="certification-preview" aria-hidden="true">
                         <img
                             src="assets/images/certificates/certification-2.png"
                             alt="Workato Foundations Level 1 certificate preview"
                             loading="lazy"
                         >
                         <span class="preview-overlay">
-                            <span>View certificate <span aria-hidden="true">↗</span></span>
+                            <span>Details &amp; PDF <span aria-hidden="true">↗</span></span>
                         </span>
-                    </a>
+                    </div>
 
                     <div class="certification-info">
                         <span class="certification-category">WORKFLOW AUTOMATION</span>
@@ -682,26 +701,23 @@
                         <p class="certification-date">Completed October 20, 2026</p>
 
                     </div>
+                
+                    </div>
                 </article>
 
                 <!-- Certification 3 -->
-                <article class="certification-card">
-                    <a
-                        href="assets/pdfs/certification-3.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="certification-preview"
-                        aria-label="View Workato Foundations Level 2 certificate PDF"
-                    >
+                <article class="certification-card" data-certification-pdf="assets/pdfs/certification-3.pdf">
+                    <div class="certificate-face">
+                    <div class="certification-preview" aria-hidden="true">
                         <img
                             src="assets/images/certificates/certification-3.png"
                             alt="Workato Foundations Level 2 certificate preview"
                             loading="lazy"
                         >
                         <span class="preview-overlay">
-                            <span>View certificate <span aria-hidden="true">↗</span></span>
+                            <span>Details &amp; PDF <span aria-hidden="true">↗</span></span>
                         </span>
-                    </a>
+                    </div>
 
                     <div class="certification-info">
                         <span class="certification-category">WORKFLOW AUTOMATION</span>
@@ -713,25 +729,67 @@
                         <p class="certification-date">Completed October 20, 2026</p>
 
                     </div>
+                
+                    </div>
                 </article>
 
             </div>
+                </div>
+            </div>
+           </div>
+          </div>
         </section>
+
+        <dialog class="certificate-dialog" id="certificate-dialog" aria-labelledby="certificate-dialog-title">
+            <div class="certificate-dialog-card">
+                <div class="certificate-dialog-image-wrap">
+                    <img id="certificate-dialog-image" src="" alt="">
+                </div>
+                <div class="certificate-dialog-copy">
+                    <p class="certificate-dialog-category" id="certificate-dialog-category"></p>
+                    <h2 id="certificate-dialog-title"></h2>
+                    <p class="certificate-dialog-issuer" id="certificate-dialog-issuer"></p>
+                    <p class="certificate-dialog-description" id="certificate-dialog-description"></p>
+                    <p class="certificate-dialog-date" id="certificate-dialog-date"></p>
+                    <div class="certificate-dialog-actions">
+                        <a id="certificate-dialog-pdf" href="#" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
+                        <button id="certificate-dialog-close" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </dialog>
 
         <!-- PROJECTS SECTION -->
         <section class="projects section" id="projects">
 
-            <div class="section-heading">
-                <p class="section-eyebrow">MY WORK</p>
-                <h2>Projects I've brought<br><span>to life.</span></h2>
-                <p class="section-subtitle">
-                    A collection of academic and individual projects
-                    where I applied my technical knowledge to build
-                    practical digital solutions.
-                </p>
+            <div class="projects-heading-row">
+                <div class="section-heading">
+                    <p class="section-eyebrow">MY WORK / 07 PROJECTS</p>
+                    <h2>Projects I've brought<br><span>to life.</span></h2>
+                    <p class="section-subtitle">
+                        Individual builds and collaborative work, brought together in one place.
+                    </p>
+                </div>
+
+                <div class="project-console" aria-label="Filter projects by type">
+                    <span class="console-label"><span aria-hidden="true">⌘</span> VIEW PROJECTS</span>
+                    <div class="project-filters" role="group" aria-label="Project type">
+                        <button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">All <span>07</span></button>
+                        <button type="button" class="filter-chip" data-filter="individual" aria-pressed="false">Individual <span>03</span></button>
+                        <button type="button" class="filter-chip" data-filter="collaborative" aria-pressed="false">Collaborative <span>04</span></button>
+                    </div>
+                </div>
             </div>
 
-            <div class="projects-grid">
+            <div class="project-index-controls">
+                <span class="index-label">PROJECT INDEX / <output id="project-index-count" aria-live="polite">01 / 07</output></span>
+                <div class="deck-arrows" aria-label="Browse project cards">
+                    <button type="button" class="deck-arrow" data-deck="projects" data-direction="-1" aria-label="Previous project">←</button>
+                    <button type="button" class="deck-arrow" data-deck="projects" data-direction="1" aria-label="Next project">→</button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="project-deck" tabindex="0" aria-label="Project index. Browse with the arrow keys or browse buttons.">
 
                 <!-- Project 1: SENTRY -->
                 <article class="project-card">
@@ -858,24 +916,7 @@
                     </div>
                 </article>
 
-            </div>
 
-        </section>
-
-
-        <!-- FEATURED COLLABORATIVE PROJECTS -->
-        <section class="projects featured-projects section" id="featured-projects">
-
-            <div class="section-heading">
-                <p class="section-eyebrow">COLLABORATIVE ACADEMIC WORK</p>
-                <h2>Featured<br><span>Projects.</span></h2>
-                <p class="section-subtitle">
-                    Collaborative academic projects where I contributed
-                    to project documentation, research, and team deliverables.
-                </p>
-            </div>
-
-            <div class="projects-grid">
 
                 <!-- Barangay Comembo Blotter Management System -->
                 <article class="project-card">
@@ -1030,6 +1071,7 @@
 
         </section>
 
+
         <!-- PROJECT GALLERY LIGHTBOX -->
         <div class="gallery-lightbox" id="project-gallery" aria-hidden="true">
             <div class="gallery-content" role="dialog"
@@ -1061,6 +1103,8 @@
                         &#10095;
                     </button>
                 </div>
+
+                <div class="gallery-filmstrip" id="gallery-filmstrip" aria-label="Choose a project screenshot"></div>
 
                 <div class="gallery-footer">
                     <p id="gallery-caption"></p>
@@ -1229,7 +1273,6 @@
                 ></p>
 
             </form>
-
         </section>
 
     </main>
@@ -1286,6 +1329,25 @@
             </button>
 
         </div>
+    </div>
+
+    <div class="command-palette" id="command-palette" aria-hidden="true">
+        <div class="command-backdrop" data-command-close></div>
+        <section class="command-window" role="dialog" aria-modal="true" aria-labelledby="command-title">
+            <div class="command-window-heading">
+                <div><span class="command-kicker">AR / QUICK ACCESS</span><h2 id="command-title">Where to?</h2></div>
+                <button type="button" class="command-close" data-command-close aria-label="Close quick navigation">Esc</button>
+            </div>
+            <p class="command-prompt"><span aria-hidden="true">⌕</span> Choose a destination <kbd>↑</kbd><kbd>↓</kbd><kbd>↵</kbd></p>
+            <nav class="command-options" aria-label="Quick navigation">
+                <a href="#about"><span class="command-icon">01</span><span>About me<small>Meet the person behind the projects</small></span><span class="command-arrow">↗</span></a>
+                <a href="#experience"><span class="command-icon">02</span><span>Experience<small>Learning, leadership, and growth</small></span><span class="command-arrow">↗</span></a>
+                <a href="#skills"><span class="command-icon">03</span><span>Skills &amp; toolkit<small>What I bring to the build</small></span><span class="command-arrow">↗</span></a>
+                <a href="#projects"><span class="command-icon">04</span><span>Selected projects<small>Things I helped bring to life</small></span><span class="command-arrow">↗</span></a>
+                <a href="#contact"><span class="command-icon">05</span><span>Let's connect<small>Start a conversation</small></span><span class="command-arrow">↗</span></a>
+            </nav>
+            <div class="command-footer"><span><i></i> INTERFACE READY</span><span>MADE WITH INTENTION <b>✳</b></span></div>
+        </section>
     </div>
 
 </body>
