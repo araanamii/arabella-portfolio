@@ -5891,3 +5891,19 @@ html[data-theme="dark"] #experience .journey-card .journey-date { color: #d2deec
 html[data-theme="dark"] #experience .journey-card .journey-details h3 { color: #f0f5fb; }
 html[data-theme="dark"] #experience .journey-card .journey-organization { color: #c5d9ed; }
 html[data-theme="dark"] #experience .journey-card .journey-description { color: #d0d9e5; }
+
+/* On phones, keep the oversized decorative skill glyph from becoming emoji artwork. */
+@media (max-width: 700px) {
+  #skills .skill-card::after { display: none; }
+
+  /* Align the experience metadata consistently to the card's right edge. */
+  #experience .journey-card .journey-meta {
+    align-items: flex-end;
+    text-align: right;
+  }
+  #experience .journey-card .journey-type,
+  #experience .journey-card .journey-date {
+    align-self: flex-end;
+    text-align: right;
+  }
+}
