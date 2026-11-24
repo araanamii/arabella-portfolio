@@ -5896,14 +5896,22 @@ html[data-theme="dark"] #experience .journey-card .journey-description { color: 
 @media (max-width: 700px) {
   #skills .skill-card::after { display: none; }
 
-  /* Align the experience metadata consistently to the card's right edge. */
+  /* Keep the experience category left and its date right on phone layouts. */
   #experience .journey-card .journey-meta {
-    align-items: flex-end;
-    text-align: right;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 6px;
+    text-align: left;
   }
-  #experience .journey-card .journey-type,
+  #experience .journey-card .journey-type {
+    align-self: center;
+    text-align: left;
+  }
   #experience .journey-card .journey-date {
-    align-self: flex-end;
+    margin-left: auto;
     text-align: right;
   }
 }
